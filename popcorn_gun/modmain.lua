@@ -20,11 +20,5 @@ STRINGS.NAMES.POPCORNGUN = "Popcorn Gun"
 STRINGS.RECIPE_DESC.POPCORNGUN = "Don't eat it!"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.POPCORNGUN = "It used to be delicious"
 
-local popcorngun = GLOBAL.Recipe("popcorngun", {
-	Ingredient("corn", 2),
-	Ingredient("twigs", 1),
-	Ingredient("rope", 1),
-	Ingredient("silk", 1)
-})
-
+local popcorngun = GLOBAL.Recipe("popcorngun", {Ingredient("corn", 2),Ingredient("twigs", 1),Ingredient("rope", 1),Ingredient("silk", 1)}, RECIPETABS.WAR,  TECH.SCIENCE_TWO)
 popcorngun.atlas = "images/inventoryimages/popcorngun.xml"
