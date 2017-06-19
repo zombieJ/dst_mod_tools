@@ -29,26 +29,26 @@ local function fn(Sim)
 	MakeInventoryPhysics(inst)
 	
 	anim:SetBank("spear")
-	anim:SetBuild("goldenspear")
+	anim:SetBuild("popcorngun")
 	anim:PlayAnimation("idle")
 	
 	inst:AddTag("sharp")
 
 	inst:AddComponent("weapon")
-	inst.components.weapon:SetDamage(TUNING.GOLDENSPEAR_DAMAGE)
+	inst.components.weapon:SetDamage(TUNING.POPCORNGUN_DAMAGE)
 	
 	-------
 	
 	inst:AddComponent("finiteuses")
-	inst.components.finiteuses:SetMaxUses(TUNING.GOLDENSPEAR_USES)
-	inst.components.finiteuses:SetUses(TUNING.GOLDENSPEAR_USES)
+	inst.components.finiteuses:SetMaxUses(TUNING.POPCORNGUN_USES)
+	inst.components.finiteuses:SetUses(TUNING.POPCORNGUN_USES)
 	
 	inst.components.finiteuses:SetOnFinished( onfinished )
 
 	inst:AddComponent("inspectable")
 	
 	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem.atlasname = "images/inventoryimages/goldenspear.xml"
+	inst.components.inventoryitem.atlasname = "images/inventoryimages/popcorngun.xml"
 	
 	inst:AddComponent("equippable")
 	inst.components.equippable:SetOnEquip( onequip )
@@ -57,4 +57,4 @@ local function fn(Sim)
 	return inst
 end
 
-return Prefab( "common/inventory/goldenspear", fn, assets) 
+return Prefab( "common/inventory/popcorngun", fn, assets) 
