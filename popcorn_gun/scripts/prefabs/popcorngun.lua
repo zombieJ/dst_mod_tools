@@ -31,14 +31,14 @@ local function fn(Sim)
 	anim:SetBank("spear")
 	anim:SetBuild("popcorngun")
 	anim:PlayAnimation("idle")
-	
+
 	inst:AddTag("sharp")
 
 	inst:AddComponent("weapon")
 	inst.components.weapon:SetDamage(TUNING.POPCORNGUN_DAMAGE)
-	
+
 	-------
-	
+
 	inst:AddComponent("finiteuses")
 	inst.components.finiteuses:SetMaxUses(TUNING.POPCORNGUN_USES)
 	inst.components.finiteuses:SetUses(TUNING.POPCORNGUN_USES)
@@ -46,14 +46,14 @@ local function fn(Sim)
 	inst.components.finiteuses:SetOnFinished( onfinished )
 
 	inst:AddComponent("inspectable")
-	
+
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/popcorngun.xml"
-	
+
 	inst:AddComponent("equippable")
 	inst.components.equippable:SetOnEquip( onequip )
 	inst.components.equippable:SetOnUnequip( onunequip )
-	
+
 	return inst
 end
 
